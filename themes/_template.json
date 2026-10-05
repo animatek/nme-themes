@@ -1,0 +1,12 @@
+{
+  "format": 1,
+  "name": "My theme",
+  "base": "Dark",
+  "app": {
+    "backgroundMain": "#1b1d23",
+    "accentActive": "#e0af68"
+  },
+  "canvas": {
+    "gridBackground": "#14151a"
+  }
+}
