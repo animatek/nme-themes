@@ -17,6 +17,15 @@ Open **View > Theme > Edit Theme Colours** to change one: the canvas follows liv
 colour, and Save writes your own file. **Export Current Theme...** writes the theme in use to a
 file you can share.
 
+## NME's own themes
+
+The files marked `"official": true` (Nord, Dark, Animatek Rack...) are the themes NME ships,
+kept here too. While a file matches what NME has, Community Themes lists it as **Built in**.
+When one is touched here, every NME offers it as an **Update**, and installing it replaces the
+built-in theme in place (same place in the menu, same saved choice), with no new release needed.
+They are written by NME's `nme_theme_export` tool, so the bytes match exactly; edit them with
+the theme editor and export, not by hand. Only these names may be official.
+
 ## Share a theme
 
 Open a pull request that adds your file to `themes/`:

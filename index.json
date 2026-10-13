@@ -2,6 +2,118 @@
   "format": 1,
   "themes": [
     {
+      "name": "Animatek Rack",
+      "file": "animatek-rack.json",
+      "author": "Animatek",
+      "official": true,
+      "sha256": "edde61647fae71f38388d366cdfd82f3bc97a5c8171074691d6c791165b3921c",
+      "size": 2982
+    },
+    {
+      "name": "Cubitwig",
+      "file": "cubitwig.json",
+      "author": "Animatek",
+      "official": true,
+      "sha256": "79f50c89bd52521eb8055d72037eff5402fd448ac2b429d4c2e5e4994b153a5f",
+      "size": 2931
+    },
+    {
+      "name": "Dark",
+      "file": "dark.json",
+      "author": "Animatek",
+      "official": true,
+      "sha256": "35f26de6fdbb5afc75c321fbcba11908c341c0e9e26071a31136dd28ac62dfc1",
+      "size": 2923
+    },
+    {
+      "name": "Deep Dark",
+      "file": "deep-dark.json",
+      "author": "Animatek",
+      "official": true,
+      "sha256": "e0ea5dbbff536fd5f7739103e2e81aa2d212afe305036f46c51948612cf7fc33",
+      "size": 2933
+    },
+    {
+      "name": "Dracula",
+      "file": "dracula.json",
+      "author": "Animatek",
+      "official": true,
+      "sha256": "4027da2836020f712129994cf6d7e60de90dabb6596ed1986690ff5cc222ec66",
+      "size": 2929
+    },
+    {
+      "name": "Ghosty",
+      "file": "ghosty.json",
+      "author": "Animatek",
+      "official": true,
+      "sha256": "da4454772ef00d17a967a39c9168485cde9bf9cc3384016ef25c5dd37e7cbb04",
+      "size": 2927
+    },
+    {
+      "name": "Gruvbox Dark",
+      "file": "gruvbox-dark.json",
+      "author": "Animatek",
+      "official": true,
+      "sha256": "23b0dd41db4f8079b86272c3728312588cb8559ddf19ec654b8adae472eb6455",
+      "size": 2939
+    },
+    {
+      "name": "Macchiato",
+      "file": "macchiato.json",
+      "author": "Animatek",
+      "official": true,
+      "sha256": "c0f00e90419956e4ea9cb1e4616a0b8cfb03c7c6597cc937c5fcc21238433f47",
+      "size": 2933
+    },
+    {
+      "name": "Magnetic Revival",
+      "file": "magnetic-revival.json",
+      "author": "Animatek",
+      "official": true,
+      "sha256": "35fda2f953796c2270deb49a9138bedd376ae0340185a43af120a0408a3af86c",
+      "size": 2947
+    },
+    {
+      "name": "MothWig",
+      "file": "mothwig.json",
+      "author": "Animatek",
+      "official": true,
+      "sha256": "c2acfe44f643d5516c0f1e28c82d2462c5019c4736622cfe151ea4865605a041",
+      "size": 2929
+    },
+    {
+      "name": "Nomad",
+      "file": "nomad.json",
+      "author": "Animatek",
+      "official": true,
+      "sha256": "2dedc7227ef9c37b2351f5b8d79902cb04479b369a4dc2bc60174e1576fca91b",
+      "size": 2929
+    },
+    {
+      "name": "Nord",
+      "file": "nord.json",
+      "author": "Animatek",
+      "official": true,
+      "sha256": "173f825053541f71aa3162e41430e40a0ce4b64538423acd1307cc4697df9fd5",
+      "size": 2923
+    },
+    {
+      "name": "Nord Classic",
+      "file": "nord-classic.json",
+      "author": "Animatek",
+      "official": true,
+      "sha256": "eda17fade1b6c8e4e358c13a41ce0adb72b17a766e7154f1ceae36e0382bbd94",
+      "size": 2937
+    },
+    {
+      "name": "Tokyo Night",
+      "file": "tokyo-night.json",
+      "author": "Animatek",
+      "official": true,
+      "sha256": "14d142a5011aeb355edf13a56bd3dec97c166b3522726f696edd31c7a11c2ab9",
+      "size": 2937
+    },
+    {
       "name": "Tokyo Super Dark",
       "file": "tokyo-super-dark.json",
       "author": "Animatek",

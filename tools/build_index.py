@@ -20,7 +20,9 @@ FORMAT = 1
 MAX_BYTES = 256 * 1024          # NME refuses bigger files
 FILE_NAME = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*\.json$")
 COLOUR = re.compile(r"^#?([0-9a-fA-F]{6}|[0-9a-fA-F]{8})$")
-# NME's own themes: a community theme with one of these names would be renamed on install.
+# NME's own themes. Only an official file ("official": true) may carry one of these names:
+# it is NME's theme as the repository keeps it (written by NME's nme_theme_export), and an
+# NME whose copy differs offers it as an update.
 BUILTIN = {"nomad", "dark", "deep dark", "tokyo night", "gruvbox dark", "dracula", "nord",
            "ghosty", "magnetic revival", "mothwig", "macchiato", "cubitwig", "nord classic",
            "animatek rack"}
@@ -80,8 +82,13 @@ def read_theme(path, errors):
     name = theme.get("name")
     if not isinstance(name, str) or not name.strip():
         errors.append('"name" is missing')
-    elif name.strip().lower() in BUILTIN:
+    elif name.strip().lower() in BUILTIN and theme.get("official") is not True:
         errors.append(f'"{name}" is the name of a theme NME already has')
+    if "official" in theme:
+        if not isinstance(theme["official"], bool):
+            errors.append('"official" must be true or false')
+        elif theme["official"] and isinstance(name, str) and name.strip().lower() not in BUILTIN:
+            errors.append('"official" is only for NME\'s own themes')
     for key in ("author", "description", "base"):
         if key in theme and not isinstance(theme[key], str):
             errors.append(f'"{key}" must be text')
@@ -113,6 +120,8 @@ def main():
         for key in ("author", "description"):
             if theme.get(key, "").strip():
                 entry[key] = theme[key].strip()
+        if theme.get("official") is True:
+            entry["official"] = True
         entry["sha256"] = hashlib.sha256(data).hexdigest()
         entry["size"] = len(data)
         entries.append(entry)
