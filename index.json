@@ -1,0 +1,12 @@
+{
+  "format": 1,
+  "themes": [
+    {
+      "name": "Tokyo Super Dark",
+      "file": "tokyo-super-dark.json",
+      "author": "Animatek",
+      "sha256": "93ba2b139e50378a842fc2a17e26066dd0d3f1205e06f7f82a478da3fc7ac73f",
+      "size": 2775
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+# Checks every theme on pull requests; on main, also rewrites index.json, the list
+# Animatek NME reads to show community themes. Nobody edits index.json by hand.
+name: Theme index
+
+on:
+  pull_request:
+    paths: ["themes/**", "tools/**"]
+  push:
+    branches: [main]
+    paths: ["themes/**", "tools/**"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check the themes
+        if: github.event_name == 'pull_request'
+        run: python3 tools/build_index.py --check
+
+      - name: Rewrite index.json
+        if: github.event_name != 'pull_request'
+        run: |
+          python3 tools/build_index.py
+          if ! git diff --quiet -- index.json || [ -n "$(git ls-files --others -- index.json)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+            git add index.json
+            git commit -m "index.json: rebuilt from themes/"
+            git push
+          fi

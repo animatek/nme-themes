@@ -1,6 +1,7 @@
 {
   "format": 1,
   "name": "Tokyo Super Dark",
+  "author": "Animatek",
   "base": "Tokyo Night",
   "app": {
     "backgroundMain": "#0b0b10",
